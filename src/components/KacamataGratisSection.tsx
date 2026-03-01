@@ -66,7 +66,7 @@ export default function KacamataGratisSection() {
               <span className="text-emerald-300">|</span>
 
               <span className="font-semibold text-emerald-800">
-                Kuota 1.000 pcs
+                Kuota 1.000
               </span>
             </div>
 

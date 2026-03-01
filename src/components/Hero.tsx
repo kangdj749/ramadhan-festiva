@@ -66,7 +66,7 @@ export default function HeroSection() {
         variants={container}
         initial="hidden"
         animate="show"
-        className="relative w-full max-w-[1050px] px-6 md:px-8 text-center text-white"
+        className="relative w-full max-w-[1020px] px-6 md:px-8 text-center text-white"
       >
         <div className="space-y-6">
 
