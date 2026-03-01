@@ -96,7 +96,7 @@ export default function KategoriSection() {
               asChild
               className="bg-[#d6f605] hover:bg-lime-300 text-[#032b83] font-semibold px-6 py-3 rounded-xl text-sm transition-all duration-300 shadow-sm hover:shadow-md"
             >
-              <a href="#registrasi">Saya Siap Jadi Peserta</a>
+              <a href="/registrasi">Saya Siap Jadi Peserta</a>
             </Button>
           </motion.div>
 

@@ -26,10 +26,11 @@ export default function ClosingCTASection() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
             <button className="px-6 py-3 rounded-lg bg-[#d6f605] text-[#032b83] font-semibold text-sm shadow-sm hover:opacity-90 transition">
+              <a href="/registrasi">Daftar Lomba Sekarang</a>
               Daftar Sekarang
             </button>
             <button className="px-6 py-3 rounded-lg border border-white/40 text-white text-sm hover:bg-white/10 transition">
-              Amankan Slot Peserta
+              <a href="/registrasi">Amankan Slot Peserta</a>
             </button>
           </div>
 
