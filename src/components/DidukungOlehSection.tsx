@@ -9,7 +9,7 @@ const logos = [
   { name: "Kemenag", src: "https://res.cloudinary.com/de7fqcvpf/image/upload/v1772325106/1-KEMENAG_gvrrwc.png" },
   { name: "DP3AKB", src: "https://res.cloudinary.com/de7fqcvpf/image/upload/v1772325106/4-DP3AKB_ATAS_r5cnbc.png" },
   { name: "Disdik Jabar", src: "https://res.cloudinary.com/de7fqcvpf/image/upload/v1772195355/new-disdikjabar_rf4seo.png" },
-  { name: "Dinsos", src: "https://res.cloudinary.com/de7fqcvpf/image/upload/v1772146883/logo-laz-gdi_egmbci.png" },
+  { name: "Dinsos", src: "https://res.cloudinary.com/de7fqcvpf/image/upload/v1772359018/DINSOS_hhiwjz.png" },
   { name: "Diskominfo", src: "https://res.cloudinary.com/de7fqcvpf/image/upload/v1772325106/5-DISKOMINFO_y1zpnq.png" },
   { name: "Biro Kesra", src: "https://res.cloudinary.com/de7fqcvpf/image/upload/v1772325105/6-KESRA_JABAR_noebtq.png" },
   { name: "Biro Adpim", src: "https://res.cloudinary.com/de7fqcvpf/image/upload/v1772325105/7-ADPIM_yfwc5y.jpg" },
