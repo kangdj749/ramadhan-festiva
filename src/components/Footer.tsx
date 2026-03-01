@@ -41,18 +41,25 @@ export default function FooterSection() {
               </p>
             </div>
 
-            {/* Collaboration */}
-            <div className="space-y-2">
+
+            {/* Institutional Collaboration */}
+            <div className="space-y-3">
               <h4 className="text-[#d6f605] uppercase tracking-widest text-[10px] font-semibold">
-                Strategic Partners
+                In Collaboration With
               </h4>
-              <ul className="space-y-1 text-white/70 text-xs">
-                <li>Pemprov Jawa Barat</li>
-                <li>Kementerian Agama RI</li>
-                <li>Disdik Prov. Jawa Barat</li>
-                <li>Dinsos Prov. Jawa Barat</li>
-                <li>Diskominfo Jawa Barat</li>
-              </ul>
+
+              <p className="text-white/70 text-xs leading-relaxed">
+                Didukung oleh berbagai institusi pemerintah, lembaga pendidikan,
+                dan mitra strategis yang bersama menghadirkan gerakan kebaikan
+                dan pemberdayaan generasi muda.
+              </p>
+
+              <a
+                href="#partners"
+                className="text-[#d6f605] text-xs font-medium hover:opacity-80 transition-opacity"
+              >
+                Lihat Mitra & Dukungan →
+              </a>
             </div>
 
             {/* Contact */}
@@ -78,7 +85,7 @@ export default function FooterSection() {
           {/* Signature */}
           <div className="text-center pt-2">
             <p className="text-[#d6f605] text-sm italic">
-              From Faith to Future
+              Faith • Unity • Future
             </p>
             <p className="text-white/50 text-[11px] mt-2 tracking-wide">
               © 2026 Ramadhan Festiva · An Initiative by LAZ Graha Dhuafa Indonesia

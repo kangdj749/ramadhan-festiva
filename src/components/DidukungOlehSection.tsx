@@ -35,7 +35,7 @@ const item = {
 
 export default function DidukungOlehSection() {
   return (
-    <section className="relative w-full py-16 px-4 bg-white overflow-hidden">
+    <section id="partners" className="relative w-full py-16 px-4 bg-white overflow-hidden">
 
       {/* Divider */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1020px] h-px bg-gradient-to-r from-transparent via-emerald-200/70 to-transparent" />
