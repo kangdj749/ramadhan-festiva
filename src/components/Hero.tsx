@@ -113,10 +113,10 @@ export default function HeroSection() {
             className="mx-auto mt-4 max-w-md rounded-2xl border border-[#d6f605]/40 bg-white/10 backdrop-blur-md px-5 py-4 shadow-[0_0_25px_rgba(214,246,5,0.15)]"
           >
             <p className="text-sm font-semibold tracking-wide text-[#d6f605]">
-              🎁 BONUS SPESIAL PESERTA
+              🎁 Apresiasi untuk Orang Tua Peserta
             </p>
             <p className="text-sm text-white mt-1">
-              Gratis Kacamata untuk <span className="font-semibold text-[#d6f605]">1000 pendaftar pertama</span>
+              Gratis Kacamata bagi <span className="font-semibold text-[#d6f605]">Orang Tua dari 1000 Peserta Lomba Pertama</span>
             </p>
             <p className="text-xs text-white/60 mt-1">
               Kuota terbatas selama persediaan masih ada.
