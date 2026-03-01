@@ -196,7 +196,7 @@ export default function RegistrationPage() {
 
 function Label({ children }: { children: React.ReactNode }) {
   return (
-    <p className="text-sm font-medium mb-1 text-gray-700">
+    <p className="text-sm font-medium mb-2 text-[#032b83]">
       {children}
     </p>
   );
@@ -227,16 +227,21 @@ function SelectableCard({
   children: React.ReactNode;
 }) {
   return (
-    <div
+    <button
+      type="button"
       onClick={onClick}
-      className={`cursor-pointer px-3 py-2 text-xs rounded-lg border transition ${
-        active
-          ? "bg-[#032b83] text-white border-[#032b83]"
-          : "bg-white border-blue-200 hover:border-[#032b83]/40"
-      }`}
+      className={`
+        px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-200
+        border
+        ${
+          active
+            ? "bg-[#032b83] text-white border-[#032b83] shadow-sm"
+            : "bg-white text-[#032b83] border-blue-200 hover:border-[#032b83]/50 hover:bg-blue-50"
+        }
+      `}
     >
       {children}
-    </div>
+    </button>
   );
 }
 
@@ -254,7 +259,7 @@ function MultiSelectSection({
   return (
     <div>
       <Label>{label}</Label>
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap gap-3">
         {list.map((item) => (
           <SelectableCard
             key={item}
