@@ -14,7 +14,6 @@ type RegistrationBody = {
   grade?: string;
   city?: string;
   phone: string;
-  studentCardUrl: string;
   competitions: string[];
   tourGallery?: boolean;
   visitActivities?: string[];
@@ -32,7 +31,7 @@ export async function POST(req: Request) {
       grade,
       city,
       phone,
-      studentCardUrl,
+    
       competitions,
       tourGallery,
       visitActivities,
@@ -47,12 +46,7 @@ export async function POST(req: Request) {
         { status: 400 }
       );
 
-    if (!studentCardUrl)
-      return NextResponse.json(
-        { error: "Kartu pelajar wajib upload" },
-        { status: 400 }
-      );
-
+    
     if (!competitions || competitions.length === 0)
       return NextResponse.json(
         { error: "Minimal pilih 1 lomba" },
@@ -72,7 +66,7 @@ export async function POST(req: Request) {
       grade ?? "",
       city ?? "",
       phone,
-      studentCardUrl,
+  
       JSON.stringify(competitions),
       tourGallery ? "Ya" : "Tidak",
       JSON.stringify(visitActivities ?? []),

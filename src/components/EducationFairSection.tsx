@@ -19,7 +19,7 @@ export default function EducationFairSection() {
 
   // ✅ GANTI dengan URL Cloudinary asli kamu
   const educationRaw =
-    "https://res.cloudinary.com/de7fqcvpf/image/upload/v1772195356/SECTION-BEASISWA-1_yis4a1.png"
+    "https://res.cloudinary.com/de7fqcvpf/image/upload/v1772352740/SECTION-BEASISWA-LANDSCAPE_uk71mp.png"
 
   const educationImage = cloudinaryImage(educationRaw, "detail")
 

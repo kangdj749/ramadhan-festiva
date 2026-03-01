@@ -17,8 +17,8 @@ const logos = [
   { name: "Al-Jabbar", src: "https://res.cloudinary.com/de7fqcvpf/image/upload/v1772198935/aljabar_bvcre5.png" },
   { name: "APSAI", src: "https://res.cloudinary.com/de7fqcvpf/image/upload/v1772195355/Logo_Apsai_fekf9k.png" },
   { name: "LAZ GDI", src: "https://res.cloudinary.com/de7fqcvpf/image/upload/v1772146883/logo-laz-gdi_egmbci.png" },
-  { name: "Rohis", src: "https://res.cloudinary.com/de7fqcvpf/image/upload/v1772146883/logo-laz-gdi_egmbci.png" },
-  { name: "Lion", src: "https://res.cloudinary.com/de7fqcvpf/image/upload/v1772146883/logo-laz-gdi_egmbci.png" },
+  { name: "Rohis", src: "https://res.cloudinary.com/de7fqcvpf/image/upload/v1772353630/IMG-20260228-WA0066_smd4hy.jpg" },
+  { name: "Lion", src: "https://res.cloudinary.com/de7fqcvpf/image/upload/v1772353630/IMG-20260228-WA0035_l0xtoh.jpg" },
 ]
 
 const container = {

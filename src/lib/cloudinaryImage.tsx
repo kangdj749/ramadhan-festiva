@@ -17,3 +17,14 @@ export function cloudinaryImage(
     `/upload/${map[type]}/`
   );
 }
+
+export function cloudinaryImageHero(publicId: string, type?: string) {
+  const base = "https://res.cloudinary.com/de7fqcvpf/image/upload"
+
+  const transformations =
+    type === "lcp"
+      ? "f_auto,q_auto,w_1920"
+      : "f_auto,q_auto"
+
+  return `${base}/${transformations}/${publicId}`
+}

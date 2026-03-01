@@ -44,64 +44,47 @@ export default function RegistrationPage() {
     },
   });
 
-  const [uploading, setUploading] = useState(false);
   const [submitting, setSubmitting] = useState(false);
-  const [studentCardUrl, setStudentCardUrl] = useState("");
 
   const selectedCompetitions = watch("competitions");
   const selectedVisits = watch("visitActivities");
   const tourValue = watch("tourGallery");
 
   const toggleMulti = useCallback(
-    (value: string, field: "competitions" | "visitActivities", current: string[]) => {
+    (
+      value: string,
+      field: "competitions" | "visitActivities",
+      current: string[]
+    ) => {
       const updated = current.includes(value)
         ? current.filter((v) => v !== value)
         : [...current, value];
+
       setValue(field, updated, { shouldValidate: true });
     },
     [setValue]
   );
 
-  const handleUpload = async (file: File) => {
-    if (!file) return;
-    setUploading(true);
-    try {
-      const formData = new FormData();
-      formData.append("file", file);
-
-      const res = await fetch("/api/upload-student-card", {
-        method: "POST",
-        body: formData,
-      });
-
-      const json: { success: boolean; url?: string } = await res.json();
-      if (!res.ok || !json.success || !json.url) throw new Error("Upload gagal");
-
-      setStudentCardUrl(json.url);
-    } catch (error) {
-      alert(error instanceof Error ? error.message : "Terjadi kesalahan upload");
-    } finally {
-      setUploading(false);
-    }
-  };
-
   const onSubmit = async (data: FormValues) => {
-    if (!studentCardUrl) return alert("Upload kartu pelajar dulu ya.");
-
     setSubmitting(true);
+
     try {
       const res = await fetch("/api/registration", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...data, studentCardUrl }),
+        body: JSON.stringify(data),
       });
 
       const json: { success: boolean; error?: string } = await res.json();
-      if (!res.ok || !json.success) throw new Error(json.error || "Gagal daftar");
+
+      if (!res.ok || !json.success)
+        throw new Error(json.error || "Gagal daftar");
 
       router.push(`/success?name=${encodeURIComponent(data.fullName)}`);
     } catch (error) {
-      alert(error instanceof Error ? error.message : "Terjadi kesalahan");
+      alert(
+        error instanceof Error ? error.message : "Terjadi kesalahan"
+      );
     } finally {
       setSubmitting(false);
     }
@@ -114,7 +97,12 @@ export default function RegistrationPage() {
     { label: "Asal Sekolah", field: "school", type: "text" },
     { label: "Kelas", field: "grade", type: "text" },
     { label: "Kota / Kabupaten", field: "city", type: "text" },
-    { label: "Nomor Telepon", field: "phone", type: "tel", placeholder: "08xxxxxxxxxx" },
+    {
+      label: "Nomor Telepon",
+      field: "phone",
+      type: "tel",
+      placeholder: "08xxxxxxxxxx",
+    },
   ];
 
   return (
@@ -136,38 +124,30 @@ export default function RegistrationPage() {
             </Input>
           ))}
 
-          {/* Upload */}
-          <div>
-            <Label>Upload Kartu Pelajar</Label>
-            <input
-              type="file"
-              accept="image/*"
-              className="file-input"
-              onChange={(e) => {
-                const file = e.target.files?.[0];
-                if (file) void handleUpload(file);
-              }}
-            />
-            {uploading && <p className="text-xs mt-1 text-gray-500">Uploading...</p>}
-            {studentCardUrl && <p className="text-xs mt-1 text-green-600">Upload berhasil ✓</p>}
-          </div>
-
           {/* Lomba */}
           <MultiSelectSection
             label="Pilih Lomba (boleh lebih dari 1)"
             list={competitionsList}
             selected={selectedCompetitions}
-            onToggle={(item) => toggleMulti(item, "competitions", selectedCompetitions)}
+            onToggle={(item) =>
+              toggleMulti(item, "competitions", selectedCompetitions)
+            }
           />
 
           {/* Tour */}
           <div>
             <Label>Ikut Tour Galeri Rasulullah?</Label>
             <div className="flex gap-2">
-              <SelectableCard active={tourValue === true} onClick={() => setValue("tourGallery", true)}>
+              <SelectableCard
+                active={tourValue === true}
+                onClick={() => setValue("tourGallery", true)}
+              >
                 Ya
               </SelectableCard>
-              <SelectableCard active={tourValue === false} onClick={() => setValue("tourGallery", false)}>
+              <SelectableCard
+                active={tourValue === false}
+                onClick={() => setValue("tourGallery", false)}
+              >
                 Tidak
               </SelectableCard>
             </div>
@@ -178,13 +158,15 @@ export default function RegistrationPage() {
             label="Pilihan Kunjungan (boleh lebih dari 1)"
             list={visitList}
             selected={selectedVisits}
-            onToggle={(item) => toggleMulti(item, "visitActivities", selectedVisits)}
+            onToggle={(item) =>
+              toggleMulti(item, "visitActivities", selectedVisits)
+            }
           />
 
           <button
             type="submit"
             disabled={submitting}
-            className="w-full bg-[#032b83] text-white py-3 rounded-xl text-sm font-semibold transition disabled:opacity-50"
+            className="w-full bg-[#032b83] text-white py-3 rounded-xl text-sm font-semibold transition disabled:opacity-50 hover:opacity-90"
           >
             {submitting ? "Memproses..." : "Daftar Sekarang"}
           </button>
@@ -205,10 +187,6 @@ export default function RegistrationPage() {
           border-color: #032b83;
           box-shadow: 0 0 0 2px rgba(3, 43, 131, 0.1);
         }
-
-        .file-input {
-          font-size: 13px;
-        }
       `}</style>
     </section>
   );
@@ -217,10 +195,20 @@ export default function RegistrationPage() {
 /* COMPONENTS */
 
 function Label({ children }: { children: React.ReactNode }) {
-  return <p className="text-sm font-medium mb-1 text-gray-700">{children}</p>;
+  return (
+    <p className="text-sm font-medium mb-1 text-gray-700">
+      {children}
+    </p>
+  );
 }
 
-function Input({ label, children }: { label: string; children: React.ReactNode }) {
+function Input({
+  label,
+  children,
+}: {
+  label: string;
+  children: React.ReactNode;
+}) {
   return (
     <div>
       <Label>{label}</Label>
@@ -244,7 +232,7 @@ function SelectableCard({
       className={`cursor-pointer px-3 py-2 text-xs rounded-lg border transition ${
         active
           ? "bg-[#032b83] text-white border-[#032b83]"
-          : "bg-white border-blue-200"
+          : "bg-white border-blue-200 hover:border-[#032b83]/40"
       }`}
     >
       {children}

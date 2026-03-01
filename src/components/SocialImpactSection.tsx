@@ -19,7 +19,7 @@ export default function SocialImpactSection() {
 
   // ✅ GANTI dengan URL Cloudinary asli kamu
   const socialRaw =
-    "https://res.cloudinary.com/de7fqcvpf/image/upload/v1772195355/SECTION-250-ANAK-YATIM-1_tzzajd.png"
+    "https://res.cloudinary.com/de7fqcvpf/image/upload/v1772352740/SECTION-250-ANAK-YATIM-LANDSCAPE_tocttp.png"
 
   const socialImage = cloudinaryImage(socialRaw, "detail")
 
