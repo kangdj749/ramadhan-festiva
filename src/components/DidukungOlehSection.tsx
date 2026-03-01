@@ -48,7 +48,7 @@ export default function DidukungOlehSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-center mb-8"
+          className="text-center mb-10"
         >
           <p className="text-[11px] tracking-[0.2em] uppercase text-gray-500 mb-2">
             Kolaborasi & Dukungan
@@ -59,13 +59,13 @@ export default function DidukungOlehSection() {
           </h2>
         </motion.div>
 
-        {/* Grid Lebih Solid */}
+        {/* Logo Grid */}
         <motion.div
           variants={container}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-y-6 gap-x-6 items-center"
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-y-8 gap-x-6 items-center"
         >
           {logos.map((logo, i) => (
             <motion.div
@@ -74,7 +74,17 @@ export default function DidukungOlehSection() {
               transition={{ duration: 0.35 }}
               className="flex items-center justify-center group"
             >
-              <div className="relative h-16 w-full grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300">
+              <div
+                className="
+                  relative h-16 w-full
+                  transition-all duration-300
+
+                  /* Desktop Effect */
+                  md:grayscale md:opacity-80
+                  md:group-hover:grayscale-0
+                  md:group-hover:opacity-100
+                "
+              >
                 <Image
                   src={cloudinaryImage(logo.src, "sponsor")}
                   alt={logo.name}
