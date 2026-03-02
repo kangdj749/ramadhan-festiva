@@ -92,18 +92,18 @@ export default function RegistrationPage() {
   return (
     <section className="py-12 px-4 bg-[#f6f9ff]">
       <div className="w-full max-w-md mx-auto bg-white border border-blue-100 rounded-2xl shadow-sm p-6 space-y-6">
-        <h1 className="text-xl font-bold text-center text-[#032b83]">
-          Form Pengajuan Kacamata Gratis
+        <h1 className="text-xl font-bold text-center text-emerald-700">
+          Form Daftar Program Kacamata Gratis
         </h1>
 
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 text-emerald-700">
           {formFields.map((item) => (
             <Input key={item.field} label={item.label}>
               <input
                 {...register(item.field as keyof FormValues)}
                 type={item.type}
                 placeholder={item.placeholder}
-                className="input-premium"
+                className="input-premium text-emerald-700"
               />
             </Input>
           ))}
@@ -128,9 +128,9 @@ export default function RegistrationPage() {
           <button
             type="submit"
             disabled={submitting}
-            className="w-full bg-[#032b83] text-white py-3 rounded-xl text-sm font-semibold transition disabled:opacity-50 hover:opacity-90"
+            className="w-full bg-emerald-700 text-white py-3 rounded-xl text-sm font-semibold transition disabled:opacity-50 hover:opacity-90"
           >
-            {submitting ? "Memproses..." : "Ajukan Sekarang"}
+            {submitting ? "Memproses..." : "Daftar Program Kacamata Gratis"}
           </button>
         </form>
       </div>
