@@ -21,7 +21,7 @@ export default function TalkshowSection() {
   const speakerRaw =
     "https://res.cloudinary.com/de7fqcvpf/image/upload/v1772196325/SECTION-IMAGE-TALKSHOW_xqzxnx.png"
 
-  const speakerImage = cloudinaryImage(speakerRaw, "detail")
+  const speakerImage = cloudinaryImage(speakerRaw, "portrait")
 
   return (
     <section className="py-14 md:py-16 bg-gradient-to-b from-white via-[#f4f8ff] to-white">

@@ -48,7 +48,7 @@ export default function HeroSection() {
         <Image
           src={cloudinaryImage(
             "https://res.cloudinary.com/de7fqcvpf/image/upload/v1772197330/Masjid-al-jabbar2_ptlpcm.jpg",
-            "lcp"
+            "banner"
           )}
           alt="Ramadhan Festiva 2026 - Masjid Raya Al Jabbar"
           fill

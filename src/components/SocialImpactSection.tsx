@@ -21,7 +21,7 @@ export default function SocialImpactSection() {
   const socialRaw =
     "https://res.cloudinary.com/de7fqcvpf/image/upload/v1772352740/SECTION-250-ANAK-YATIM-LANDSCAPE_tocttp.png"
 
-  const socialImage = cloudinaryImage(socialRaw, "detail")
+  const socialImage = cloudinaryImage(socialRaw, "natural")
 
   return (
     <section className="relative py-14 md:py-16 bg-gradient-to-b from-white via-[#f8faff] to-white overflow-hidden">

@@ -21,7 +21,7 @@ export default function EducationFairSection() {
   const educationRaw =
     "https://res.cloudinary.com/de7fqcvpf/image/upload/v1772352740/SECTION-BEASISWA-LANDSCAPE_uk71mp.png"
 
-  const educationImage = cloudinaryImage(educationRaw, "detail")
+  const educationImage = cloudinaryImage(educationRaw, "natural")
 
   return (
     <section className="relative py-14 md:py-16 bg-gradient-to-b from-white via-[#f8faff] to-white overflow-hidden">
