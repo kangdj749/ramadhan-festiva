@@ -70,7 +70,6 @@ export async function POST(req: Request) {
       JSON.stringify(competitions),
       tourGallery ? "Ya" : "Tidak",
       JSON.stringify(visitActivities ?? []),
-      "pending",
     ];
 
     const sheets = getSheetsClient();
