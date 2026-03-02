@@ -4,13 +4,15 @@ import { getSheetsClient } from "@/lib/google-sheet-client";
 
 export const runtime = "nodejs";
 
-const RANGE = "kacamata!A:E";
+const RANGE = "kacamata!A:G";
 
 type RegistrationBody = {
   fullName: string;
   phone: string;
   age: string;
   address: string;
+  studentCardUrl: string;
+
 };
 
 export async function POST(req: Request) {
@@ -22,6 +24,7 @@ export async function POST(req: Request) {
       phone,
       age,
       address,
+      studentCardUrl,
       
     } = body;
 
@@ -40,6 +43,9 @@ export async function POST(req: Request) {
 
     if (!address)
       return NextResponse.json({ error: "Nama wajib diisi" }, { status: 400 });
+
+    if (!studentCardUrl)
+      return NextResponse.json({ error: "KTP wajib upload" }, { status: 400 });
   
     const id = nanoid(10);
     const createdAt = new Date().toISOString();
@@ -51,6 +57,7 @@ export async function POST(req: Request) {
       phone ?? "",
       age ?? "",
       address ?? "",  
+      studentCardUrl ?? "",
       "pending",
     ];
 
