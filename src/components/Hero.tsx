@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import Image from "next/image"
-import { Button } from "@/components/ui/button"
+
 import { useState, useEffect } from "react"
 import { cloudinaryImage } from "@/lib/cloudinaryImage"
 
@@ -136,20 +136,18 @@ export default function HeroSection() {
             variants={item}
             className="flex flex-col sm:flex-row gap-3 justify-center pt-3"
           >
-            <Button
-              asChild
+            <button
               className="bg-[#d6f605] hover:bg-lime-300 text-[#032b83] font-semibold px-6 py-3 rounded-xl text-sm md:text-base transition-all duration-300 shadow-md hover:shadow-lg"
             >
               <a href={registrasiLink}>Daftar Lomba Sekarang</a>
-            </Button>
+            </button>
 
-            <Button
-              asChild
-              variant="outline"
-              className="border-white/40 text-white hover:bg-white/10 px-6 py-3 rounded-xl text-sm md:text-base"
+            <button
+              
+              className="px-6 py-3 rounded-xl border border-white/40 text-white text-sm hover:bg-white/10 transition"
             >
               <a href="#detail">Lihat Detail Kegiatan</a>
-            </Button>
+            </button>
           </motion.div>
 
         </div>

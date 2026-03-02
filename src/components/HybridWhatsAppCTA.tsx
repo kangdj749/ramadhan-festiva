@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { MessageCircle } from "lucide-react"
-import { Button } from "@/components/ui/button"
+
 
 export default function RamadhanWhatsAppCTA() {
   const whatsappNumber = "6281322817712" // ganti jika perlu
@@ -45,14 +45,13 @@ Mohon informasi lebih lanjut ya kak 🙏
             🌙 Konsultasi & Registrasi
           </span>
 
-          <Button
-            asChild
+          <button
             className="relative bg-[#d6f605] text-[#032b83] font-semibold rounded-xl px-4 py-2 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(214,246,5,0.5)]"
           >
             <a href={waLink} target="_blank" rel="noopener noreferrer">
               WhatsApp
             </a>
-          </Button>
+          </button>
         </div>
       </motion.div>
 

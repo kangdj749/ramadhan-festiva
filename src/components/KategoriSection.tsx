@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
+
 
 export default function KategoriSection() {
   const container = {
@@ -92,12 +92,11 @@ export default function KategoriSection() {
 
           {/* CTA */}
           <motion.div variants={item} className="pt-2">
-            <Button
-              asChild
+            <button
               className="bg-[#d6f605] hover:bg-lime-300 text-[#032b83] font-semibold px-6 py-3 rounded-xl text-sm transition-all duration-300 shadow-sm hover:shadow-md"
             >
               <a href="/registrasi">Saya Siap Jadi Peserta</a>
-            </Button>
+            </button>
           </motion.div>
 
         </motion.div>

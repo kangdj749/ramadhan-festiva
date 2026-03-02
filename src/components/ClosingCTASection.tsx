@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 
 export default function ClosingCTASection() {
   return (
-    <section className="py-14 md:py-16 bg-[#032b83] text-white">
+    <section className="py-14 md:py-16 bg-[#032b83]">
       <div className="w-full max-w-[1020px] mx-auto px-5 md:px-8">
 
         <motion.div
@@ -15,7 +15,7 @@ export default function ClosingCTASection() {
           className="text-center space-y-6"
         >
 
-          <h2 className="text-[clamp(1.3rem,3vw,2rem)] font-semibold tracking-tight">
+          <h2 className="text-[clamp(1.3rem,3vw,2rem)] font-semibold tracking-tight text-white">
             Jangan Biarkan Ramadhan Ini Berlalu Tanpa Makna
           </h2>
 
