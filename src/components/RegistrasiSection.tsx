@@ -107,7 +107,7 @@ export default function RegistrationPage() {
 
   return (
     <section className="py-12 px-4 bg-[#f6f9ff]">
-      <div className="max-w-xl mx-auto bg-white border border-blue-100 rounded-2xl shadow-sm p-6 space-y-6">
+      <div className="w-full max-w-md mx-auto bg-white border border-blue-100 rounded-2xl shadow-sm p-6 space-y-6">
         <h1 className="text-xl font-bold text-center text-[#032b83]">
           Form Pendaftaran
         </h1>
@@ -259,7 +259,7 @@ function MultiSelectSection({
   return (
     <div>
       <Label>{label}</Label>
-      <div className="flex flex-wrap gap-3">
+      <div className="flex flex-wrap gap-2">
         {list.map((item) => (
           <SelectableCard
             key={item}
