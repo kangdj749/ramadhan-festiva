@@ -19,6 +19,15 @@ const logos = [
   { name: "LAZ GDI", src: "https://res.cloudinary.com/de7fqcvpf/image/upload/v1772146883/logo-laz-gdi_egmbci.png" },
   { name: "Rohis", src: "https://res.cloudinary.com/de7fqcvpf/image/upload/v1772353630/IMG-20260228-WA0066_smd4hy.jpg" },
   { name: "Lion", src: "https://res.cloudinary.com/de7fqcvpf/image/upload/v1772353630/IMG-20260228-WA0035_l0xtoh.jpg" },
+
+  { name: "MT Ibu Baik", src: "https://res.cloudinary.com/de7fqcvpf/image/upload/v1772616726/logo_mt_ibu_baik_ls09zh.png" },
+  { name: "YBAIK", src: "https://res.cloudinary.com/de7fqcvpf/image/upload/v1772616726/YBAIK_dtvqbu.png" },
+  { name: "YNAI", src: "https://res.cloudinary.com/de7fqcvpf/image/upload/v1772617156/Compart_YNAI_wl74nw.jpg" },
+  { name: "DELI", src: "https://res.cloudinary.com/de7fqcvpf/image/upload/v1772616724/DELI_wi5aui.jpg" },
+  { name: "Pegadaian", src: "https://res.cloudinary.com/de7fqcvpf/image/upload/v1772616909/pegadaian_snky9g.png" },
+  { name: "Biotex", src: "https://res.cloudinary.com/de7fqcvpf/image/upload/v1772616726/BFI_i24cbl.png" },
+  { name: "Alexa", src: "https://res.cloudinary.com/de7fqcvpf/image/upload/v1772616724/ALEXA_m3fiyf.jpg" },
+  
 ]
 
 const container = {
