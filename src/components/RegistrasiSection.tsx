@@ -18,7 +18,7 @@ type FormValues = {
 };
 
 const competitionsList: string[] = [
-  "Lomba Tahfidz",
+  
   "Lomba Kaligrafi",
   "Content Creator",
   "Public Speaking B. Arab",
