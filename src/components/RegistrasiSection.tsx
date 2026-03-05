@@ -20,10 +20,7 @@ type FormValues = {
 const competitionsList: string[] = [
   
   "Lomba Kaligrafi",
-  "Content Creator",
-  "Public Speaking B. Arab",
-  "Public Speaking B. Inggris",
-  "Public Speaking B. Sunda",
+  
 ];
 
 const visitList: string[] = [
