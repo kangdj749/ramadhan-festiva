@@ -20,46 +20,23 @@ export default function RegistrationPage() {
     
   } = useForm<FormValues>();
 
-  const [uploading, setUploading] = useState(false);
+  
   const [submitting, setSubmitting] = useState(false);
-  const [studentCardUrl, setStudentCardUrl] = useState("");
+  
 
   
 
-  const handleUpload = async (file: File) => {
-    if (!file) return;
-    setUploading(true);
-    try {
-      const formData = new FormData();
-      formData.append("file", file);
-
-      const res = await fetch("/api/upload-student-card", {
-        method: "POST",
-        body: formData,
-      });
-
-      const json: { success: boolean; url?: string } = await res.json();
-
-      if (!res.ok || !json.success || !json.url) throw new Error("Upload gagal");
-
-      setStudentCardUrl(json.url);
-    } catch (error) {
-      alert(error instanceof Error ? error.message : "Terjadi kesalahan upload");
-    } finally {
-      setUploading(false);
-    }
-  };
+  
 
   const onSubmit = async (data: FormValues) => {
-    if (!studentCardUrl) return alert("Upload kartu pelajar dulu ya.");
-    
+     
 
     setSubmitting(true);
     try {
       const res = await fetch("/api/registrationkacamata", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...data, studentCardUrl }),
+        body: JSON.stringify({ ...data}),
       });
 
       const json: { success: boolean; error?: string } = await res.json();
@@ -108,23 +85,7 @@ export default function RegistrationPage() {
             </Input>
           ))}
 
-          {/* Upload */}
-            <div>
-              <p className="label">Upload KTP</p>
-              <div className="input-box">
-                <input
-                  type="file"
-                  accept="image/*"
-                  onChange={(e) => {
-                    const file = e.target.files?.[0];
-                    if (file) void handleUpload(file);
-                  }}
-                />
-              </div>
-              {uploading && <p className="text-xs text-muted mt-1">Uploading...</p>}
-              {studentCardUrl && <p className="text-xs mt-1 text-primary">Upload berhasil ✓</p>}
-            </div>               
-
+          
           <button
             type="submit"
             disabled={submitting}
